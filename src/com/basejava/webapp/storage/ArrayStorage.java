@@ -1,3 +1,5 @@
+package com.basejava.webapp.storage;
+
 import java.util.Arrays;
 
 /**
@@ -18,13 +20,12 @@ public class ArrayStorage {
     }
 
     Resume get(String uuid) {
-        Resume resume = null;
         for (int i = 0; i < size; i++) {
             if (uuid.equals(storage[i].uuid)) {
-                resume = storage[i];
+                return storage[i];
             }
         }
-        return resume;
+        return null;
     }
 
     void delete(String uuid) {
